@@ -1,0 +1,24 @@
+[package]
+name = "presenter-by-cenlun"
+version = "26.1.0"
+description = "Presenter by Cenlun"
+homepage = "https://github.com/CenlunChungPoLun/Presenter"
+license = "Apache-2.0"
+authors = ["鐘柏倫 (Cenlun Chung Po Lun)"]
+repository = "https://github.com/CenlunChungPoLun/Presenter"
+edition = "2024"
+rust-version = "1.85.0"
+
+[lib]
+name = "presenter_by_cenlun_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.5.3", features = [] }
+
+[dependencies]
+log = "0.4.27"
+tauri = { version = "2.9.5", features = ["macos-private-api"] }
+tauri-plugin-dialog = "2.4.2"
+tauri-plugin-log = "2.7.1"
+tauri-plugin-opener = "2.5.2"

@@ -1,0 +1,56 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Presenter by Cenlun",
+  "version": "../package.json",
+  "identifier": "tw.CenlunChungPoLun.PresenterByCenlun",
+  "mainBinaryName": "PresenterByCenlun",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:4200",
+    "beforeDevCommand": "pnpm run dev",
+    "beforeBuildCommand": "pnpm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Presenter by Cenlun",
+        "width": 1280,
+        "height": 720,
+        "resizable": true,
+        "fullscreen": false,
+        "useHttpsScheme": true,
+        "transparent": true,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "windowEffects": {
+          "effects": [
+            "mica",
+            "underWindowBackground"
+          ]
+        }
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "macOSPrivateApi": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app",
+      "appimage"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "copyright": "© 2026 鐘柏倫 (Cenlun Chung Po Lun)",
+    "macOS": {
+      "minimumSystemVersion": "13.0"
+    }
+  }
+}

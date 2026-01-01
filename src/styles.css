@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@import "@animxyz/core";
+@import "animate.css";
+@import "bootstrap/dist/css/bootstrap.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@import "./styles/sg.css";
+@import "./styles/soft-button.css";
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @variant sm {
+    padding-inline: 2rem;
+  }
+
+  @variant lg {
+    padding-inline: 4rem;
+  }
+
+  @variant xl {
+    padding-inline: 5rem;
+  }
+
+  @variant 2xl {
+    padding-inline: 6rem;
+  }
+}
+
+:root {
+  background-color: initial;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+*:focus {
+  outline-color: var(--sg-accent);
+  outline-offset: 0.25rem;
+  transition: var(--sg-transition);
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color: initial;
+  user-select: none;
+}
+
+a {
+  color: var(--sg-secondary);
+  font-weight: bold;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}

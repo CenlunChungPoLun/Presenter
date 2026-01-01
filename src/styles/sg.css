@@ -1,0 +1,58 @@
+:root {
+  --sg-secondary: #0080ff;
+  --sg-accent: #ff8000;
+  --sg-error: #ed5a5a;
+
+  --sg-corner-radius: 0.5rem;
+  --sg-corner-radius-s: 0.25rem;
+
+  --sg-box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.25);
+
+  --sg-transition: 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.sg-secondary {
+  color: var(--sg-secondary);
+}
+
+.sg-accent {
+  color: var(--sg-accent);
+}
+
+.sg-error {
+  color: var(--sg-error);
+}
+
+.sg-corner-radius {
+  border-radius: var(--sg-corner-radius);
+}
+
+.sg-shadow {
+  box-shadow: var(--sg-box-shadow);
+}
+
+.sg-button {
+  display: flex;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  align-items: center;
+  flex-shrink: 0;
+
+  background: white;
+  border-radius: var(--sg-corner-radius-s);
+  border-width: 0;
+  box-shadow: var(--sg-box-shadow);
+
+  transition: var(--sg-transition);
+
+  user-select: none;
+}
+
+.sg-button:hover {
+  box-shadow: 0 0 0.25rem 0 var(--sg-secondary);
+}
+
+.sg-button:active {
+  background: rgba(0, 0, 0, 0.0625);
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 1);
+}
